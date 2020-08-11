@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Michael\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Michael\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Warped Bounty.1885364203.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Michael\UnityProjects\Warped Bounty" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Project" t="Include">
+          <e p="InputSystem" t="Include">
+            <e p="InputMaster.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Player" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+              <e p="PlayerMovement.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Warped Bounty.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
