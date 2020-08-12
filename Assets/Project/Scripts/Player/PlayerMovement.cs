@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace MichaelCox.Player
+namespace WarpedBounty.Player
 {
     public class PlayerMovement : MonoBehaviour
     {

@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="" />
+    <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +43,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -89,6 +92,7 @@
       <updated>1597117604856</updated>
       <workItem from="1597117614717" duration="2151000" />
       <workItem from="1597119837669" duration="3926000" />
+      <workItem from="1597190335035" duration="66000" />
     </task>
     <servers />
   </component>

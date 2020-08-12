@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace MichaelCox.Player
+namespace WarpedBounty.Player
 {
     public class PlayerController : MonoBehaviour, InputMaster.IGameplayActions
     {
