@@ -392,6 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616153724}
+  - component: {fileID: 616153725}
   m_Layer: 0
   m_Name: GroundCheckPoint
   m_TagString: Untagged
@@ -413,6 +414,25 @@ Transform:
   m_Father: {fileID: 1168883949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &616153725
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616153723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0484b02035746f046b4464547eb37349, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &973875982
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +558,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -603,6 +623,8 @@ GameObject:
   - component: {fileID: 1168883951}
   - component: {fileID: 1168883947}
   - component: {fileID: 1168883950}
+  - component: {fileID: 1168883953}
+  - component: {fileID: 1168883948}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -620,6 +642,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cbd0a674bded3849af87d0e947cad23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1168883948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168883946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b50dd8c15a7574f9115dfd4ee7ead7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1168883949
@@ -653,6 +687,7 @@ MonoBehaviour:
   speed: 1
   jumpForce: 100
   groundCheckPoint: {fileID: 616153724}
+  animator: {fileID: 1183455724}
 --- !u!70 &1168883951
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -690,6 +725,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1168883953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168883946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 831e67e387b8d064fa4c540193a7a7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1183455724}
 --- !u!1 &1183455721
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183455722}
   - component: {fileID: 1183455723}
+  - component: {fileID: 1183455724}
   m_Layer: 0
   m_Name: Art
   m_TagString: Untagged
@@ -772,6 +821,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1183455724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183455721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91bb83b5dd910b64b91866d576c5a388, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1486920997
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +965,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1074,7 +1142,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

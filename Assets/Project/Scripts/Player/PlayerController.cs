@@ -5,15 +5,21 @@ using WarpedBounty.Player;
 namespace WarpedBounty.Player
 {
     [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerWeapons))]
+    [RequireComponent(typeof(PlayerHealth))]
     public class PlayerController : MonoBehaviour, InputMaster.IGameplayActions
     {
         private InputMaster _inputMaster;
         private PlayerMovement _playerMovement;
+        private PlayerWeapons _playerWeapons;
+        private PlayerHealth _playerHealth;
 
         private void Awake()
         {
             _inputMaster = new InputMaster();
             _playerMovement = GetComponent<PlayerMovement>();
+            _playerWeapons = GetComponent<PlayerWeapons>();
+            _playerHealth = GetComponent<PlayerHealth>();
             
             _inputMaster.Gameplay.SetCallbacks(this);
         }
@@ -28,6 +34,16 @@ namespace WarpedBounty.Player
         {
             if (context.performed)
                 _playerMovement.Jump();
+        }
+
+        public void OnShoot(InputAction.CallbackContext context)
+        {
+            _playerWeapons.Shoot();
+        }
+
+        public void OnUpDown(InputAction.CallbackContext context)
+        {
+            throw new System.NotImplementedException();
         }
 
         private void OnEnable()

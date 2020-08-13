@@ -20,15 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_cling.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_cling.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_duck.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_duck.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_hurt.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_hurt.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_rotate.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_rotate.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_start.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_start.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run_shoot.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run_shoot.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_shoot_up.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_shoot_up.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_stand.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_stand.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Sprites/player/player-idle/player-idle-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Sprites/player/player-idle/player-idle-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/InputSystem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/InputSystem/InputMaster.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/InputSystem/InputMaster.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/InputSystem/InputMaster.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/InputSystem/InputMaster.inputactions.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
@@ -41,29 +64,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@4.1.2/Runtime/SpriteShapeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1fw84hNFwJBg1RAyyK7z40gCcE2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -103,7 +134,7 @@
       <workItem from="1597117614717" duration="2151000" />
       <workItem from="1597119837669" duration="3926000" />
       <workItem from="1597190335035" duration="4155000" />
-      <workItem from="1597276537266" duration="3236000" />
+      <workItem from="1597276537266" duration="9595000" />
     </task>
     <servers />
   </component>
@@ -125,6 +156,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">

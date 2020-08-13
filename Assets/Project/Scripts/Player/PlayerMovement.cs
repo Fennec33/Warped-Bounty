@@ -10,6 +10,12 @@ namespace WarpedBounty.Player
         [SerializeField] private float jumpForce = 100f;
         [SerializeField] private Transform groundCheckPoint;
         
+        [SerializeField] private Animator animator;
+        private readonly int a_IsMoving = Animator.StringToHash("IsMoving");
+        private readonly int a_IsFacingUp = Animator.StringToHash("IsFacingUp");
+        private readonly int a_IsDucking = Animator.StringToHash("IsDucking");
+        private readonly int a_IsJumping = Animator.StringToHash("IsJumping");
+        private readonly int a_StartJump = Animator.StringToHash("StartJump");
         
         private Rigidbody2D _rigidbody2D;
         private Vector3 _direction;
@@ -25,9 +31,11 @@ namespace WarpedBounty.Player
         {
             if (direction == _direction) return;
             _direction = direction;
+            animator.SetBool(a_IsMoving, false);
             
             if (direction == Vector3.zero) return;
             FlipDirectionTo(direction.x);
+            animator.SetBool(a_IsMoving, true);
         }
 
         public void Jump()
@@ -38,6 +46,8 @@ namespace WarpedBounty.Player
             {
                 if (collision.gameObject == gameObject) continue;
                 _rigidbody2D.AddForce(transform.up * jumpForce);
+                animator.SetBool(a_IsJumping, true);
+                animator.SetTrigger(a_StartJump);
                 break;
             }
         }
@@ -53,6 +63,11 @@ namespace WarpedBounty.Player
         private void FixedUpdate()
         {
             transform.position += Time.deltaTime * speed * _direction;
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            animator.SetBool(a_IsJumping, false);
         }
     }
 }
