@@ -43,7 +43,7 @@ namespace WarpedBounty.Player
 
         public void OnUpDown(InputAction.CallbackContext context)
         {
-            throw new System.NotImplementedException();
+            _playerMovement.UpDown(context.ReadValue<float>());
         }
 
         private void OnEnable()

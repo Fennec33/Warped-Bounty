@@ -52,6 +52,25 @@ namespace WarpedBounty.Player
             }
         }
 
+        public void UpDown(float axis)
+        {
+            if (axis > 0f)
+            {
+                animator.SetBool(a_IsDucking, false);
+                animator.SetBool(a_IsFacingUp, true);
+            }
+            else if (axis < 0f)
+            {
+                animator.SetBool(a_IsFacingUp, false);
+                animator.SetBool(a_IsDucking, true);
+            }
+            else
+            {
+                animator.SetBool(a_IsFacingUp, false);
+                animator.SetBool(a_IsDucking, false);
+            }
+        }
+
         private void FlipDirectionTo(float dir)
         {
             var transform1 = transform;
