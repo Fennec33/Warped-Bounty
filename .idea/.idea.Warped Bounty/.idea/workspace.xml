@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +103,7 @@
       <workItem from="1597117614717" duration="2151000" />
       <workItem from="1597119837669" duration="3926000" />
       <workItem from="1597190335035" duration="4155000" />
-      <workItem from="1597276537266" duration="10696000" />
+      <workItem from="1597276537266" duration="11854000" />
     </task>
     <servers />
   </component>

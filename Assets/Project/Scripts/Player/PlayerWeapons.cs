@@ -10,11 +10,6 @@ namespace WarpedBounty.Player
 
         private float _shootTimeElapsed = 0f;
 
-        private void Start()
-        {
-            animator.SetFloat(a_TimeSinceLastShoot, 100f);
-        }
-
         private void Update()
         {
             _shootTimeElapsed += Time.deltaTime;
