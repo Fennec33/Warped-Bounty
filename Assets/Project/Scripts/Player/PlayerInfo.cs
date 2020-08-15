@@ -4,25 +4,41 @@ namespace WarpedBounty.Player
 {
     public class PlayerInfo : MonoBehaviour
     {
-        public Vector3 Direction { get; set; }
         [SerializeField] private Animator animator;
-        private readonly int a_IsMoving = Animator.StringToHash("IsMoving");
-        private readonly int a_IsFacingUp = Animator.StringToHash("IsFacingUp");
-        private readonly int a_IsDucking = Animator.StringToHash("IsDucking");
-        private readonly int a_IsJumping = Animator.StringToHash("IsJumping");
-        private readonly int a_StartJump = Animator.StringToHash("StartJump");
-        private readonly int a_TimeSinceLastShoot = Animator.StringToHash("TimeSinceLastShoot");
+        #region Animator Strings To Hash
+        private readonly int _isMoving = Animator.StringToHash("IsMoving");
+        private readonly int _isFacingUp = Animator.StringToHash("IsFacingUp");
+        private readonly int _isDucking = Animator.StringToHash("IsDucking");
+        private readonly int _isJumping = Animator.StringToHash("IsJumping");
+        private readonly int _startJump = Animator.StringToHash("StartJump");
+        private readonly int _timeSinceLastShoot = Animator.StringToHash("TimeSinceLastShoot");
+        #endregion
 
-        public bool IsMoving() => animator.GetBool(a_IsMoving);
-        public void IsMoving(bool value) => animator.SetBool(a_IsMoving, value);
-        public bool IsFacingUp() => animator.GetBool(a_IsFacingUp);
-        public void IsFacingUp(bool value) => animator.SetBool(a_IsFacingUp, value);
-        public bool IsDucking() => animator.GetBool(a_IsDucking);
-        public void IsDucking(bool value) => animator.SetBool(a_IsDucking, value);
-        public bool IsJumping() => animator.GetBool(a_IsJumping);
-        public void IsJumping(bool value) => animator.SetBool(a_IsJumping, value);
-        public void StartJumpAnimation() => animator.SetTrigger(a_StartJump);
-        public float TimeSinceLastShoot() => animator.GetFloat(a_TimeSinceLastShoot);
-        public void TimeSinceLastShoot(float value) => animator.SetFloat(a_TimeSinceLastShoot, value);
+        private Vector3 _direction;
+        public Vector3 Direction
+        {
+            get => _direction;
+            set
+            {
+                _direction = value;
+                if (value != Vector3.zero)
+                    DirectionFacing = value;
+            }
+        }
+        public Vector3 DirectionFacing { get; private set; }
+        
+        #region Animation Controll
+        public bool IsMoving() => animator.GetBool(_isMoving);
+        public void IsMoving(bool value) => animator.SetBool(_isMoving, value);
+        public bool IsFacingUp() => animator.GetBool(_isFacingUp);
+        public void IsFacingUp(bool value) => animator.SetBool(_isFacingUp, value);
+        public bool IsDucking() => animator.GetBool(_isDucking);
+        public void IsDucking(bool value) => animator.SetBool(_isDucking, value);
+        public bool IsJumping() => animator.GetBool(_isJumping);
+        public void IsJumping(bool value) => animator.SetBool(_isJumping, value);
+        public void StartJumpAnimation() => animator.SetTrigger(_startJump);
+        public float TimeSinceLastShoot() => animator.GetFloat(_timeSinceLastShoot);
+        public void TimeSinceLastShoot(float value) => animator.SetFloat(_timeSinceLastShoot, value);
+        #endregion
     }
 }

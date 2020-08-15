@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using WarpedBounty.Player;
 
@@ -32,8 +33,8 @@ namespace WarpedBounty.Player
 
         public void OnJump(InputAction.CallbackContext context)
         {
-            if (context.performed)
-                _playerMovement.Jump();
+            if (!context.performed) return;
+            _playerMovement.Jump();
         }
 
         public void OnShoot(InputAction.CallbackContext context)

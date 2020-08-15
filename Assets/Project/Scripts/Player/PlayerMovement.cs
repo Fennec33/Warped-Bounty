@@ -6,19 +6,12 @@ namespace WarpedBounty.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private PlayerInfo player;
         [SerializeField] private float speed = 1f;
         [SerializeField] private float jumpForce = 100f;
         [SerializeField] private Transform groundCheckPoint;
-        
-        [SerializeField] private Animator animator;
-        private readonly int a_IsMoving = Animator.StringToHash("IsMoving");
-        private readonly int a_IsFacingUp = Animator.StringToHash("IsFacingUp");
-        private readonly int a_IsDucking = Animator.StringToHash("IsDucking");
-        private readonly int a_IsJumping = Animator.StringToHash("IsJumping");
-        private readonly int a_StartJump = Animator.StringToHash("StartJump");
-        
+
         private Rigidbody2D _rigidbody2D;
-        private Vector3 _direction;
 
         private const float GroundCheckRadius = 0.01f;
 
@@ -29,13 +22,13 @@ namespace WarpedBounty.Player
 
         public void Move(Vector3 direction)
         {
-            if (direction == _direction) return;
-            _direction = direction;
-            animator.SetBool(a_IsMoving, false);
+            if (direction == player.Direction) return;
+            player.Direction = direction;
+            player.IsMoving(false);
             
             if (direction == Vector3.zero) return;
             FlipDirectionTo(direction.x);
-            animator.SetBool(a_IsMoving, true);
+            player.IsMoving(true);
         }
 
         public void Jump()
@@ -46,8 +39,8 @@ namespace WarpedBounty.Player
             {
                 if (collision.gameObject == gameObject) continue;
                 _rigidbody2D.AddForce(transform.up * jumpForce);
-                animator.SetBool(a_IsJumping, true);
-                animator.SetTrigger(a_StartJump);
+                player.IsJumping(true);
+                player.StartJumpAnimation();
                 break;
             }
         }
@@ -56,18 +49,18 @@ namespace WarpedBounty.Player
         {
             if (axis > 0f)
             {
-                animator.SetBool(a_IsDucking, false);
-                animator.SetBool(a_IsFacingUp, true);
+                player.IsDucking(false);
+                player.IsFacingUp(true);
             }
             else if (axis < 0f)
             {
-                animator.SetBool(a_IsFacingUp, false);
-                animator.SetBool(a_IsDucking, true);
+                player.IsFacingUp(false);
+                player.IsDucking(true);
             }
             else
             {
-                animator.SetBool(a_IsFacingUp, false);
-                animator.SetBool(a_IsDucking, false);
+                player.IsFacingUp(false);
+                player.IsDucking(false);
             }
         }
 
@@ -81,12 +74,12 @@ namespace WarpedBounty.Player
 
         private void FixedUpdate()
         {
-            transform.position += Time.deltaTime * speed * _direction;
+            transform.position += Time.deltaTime * speed * player.Direction;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            animator.SetBool(a_IsJumping, false);
+            player.IsJumping(false);
         }
     }
 }

@@ -6,39 +6,33 @@ namespace WarpedBounty.Player
 {
     public class PlayerWeapons : MonoBehaviour
     {
-        [SerializeField] private Animator animator;
-        [SerializeField] private GameObject shot;
-        [SerializeField] private Transform firePoint_stand;
-        [SerializeField] private Transform firePoint_duck;
-        [SerializeField] private Transform firePoint_up;
-        
-        
-        private readonly int a_TimeSinceLastShoot = Animator.StringToHash("TimeSinceLastShoot");
-        private readonly int a_IsFacingUp = Animator.StringToHash("IsFacingUp");
-        private readonly int a_IsDucking = Animator.StringToHash("IsDucking");
+        [SerializeField] private PlayerInfo player;
+        [SerializeField] private Transform firePointStand;
+        [SerializeField] private Transform firePointDuck;
+        [SerializeField] private Transform firePointUp;
 
         private float _shootTimeElapsed = 0f;
 
         private void Update()
         {
             _shootTimeElapsed += Time.deltaTime;
-            animator.SetFloat(a_TimeSinceLastShoot, _shootTimeElapsed);
+            player.TimeSinceLastShoot(_shootTimeElapsed);
         }
 
         public void Shoot()
         {
             Vector3 firePoint;
 
-            if (animator.GetBool(a_IsDucking))
-                firePoint = firePoint_duck.position;
-            else if (animator.GetBool(a_IsFacingUp))
-                firePoint = firePoint_up.position;
+            if (player.IsDucking())
+                firePoint = firePointDuck.position;
+            else if (player.IsFacingUp())
+                firePoint = firePointUp.position;
             else
-                firePoint = firePoint_stand.position;
+                firePoint = firePointStand.position;
 
             var newShot = ShotPool.Instance.Get();
             newShot.transform.position = firePoint;
-            newShot.SetDirection(Vector3.right);
+            newShot.SetDirection(player.DirectionFacing);
             newShot.gameObject.SetActive(true);
             _shootTimeElapsed = 0f;
         }

@@ -383,16 +383,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &782131183 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6297499479582169698, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-  m_PrefabInstance: {fileID: 2647371437389084615}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &871622285 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1676172145828927834, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-  m_PrefabInstance: {fileID: 2647371437389084615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &973875982
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,11 +560,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1221331551 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3625630584688625411, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-  m_PrefabInstance: {fileID: 2647371437389084615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1274781467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,26 +1013,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2647371436410058550, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-      propertyPath: shot
-      value: 
-      objectReference: {fileID: 3649507625192987586, guid: 6f27fc84d1f2fd14e9363d8112b5f365, type: 3}
-    - target: {fileID: 2647371436410058550, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1221331551}
-    - target: {fileID: 2647371436410058550, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-      propertyPath: firePoint_stand
-      value: 
-      objectReference: {fileID: 1221331551}
-    - target: {fileID: 2647371436410058550, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-      propertyPath: firePoint_duck
-      value: 
-      objectReference: {fileID: 782131183}
-    - target: {fileID: 2647371436410058550, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
-      propertyPath: firePoint_up
-      value: 
-      objectReference: {fileID: 871622285}
     - target: {fileID: 2647371438002976186, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
       propertyPath: m_Controller
       value: 

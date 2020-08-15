@@ -296,10 +296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f1621bbe88ef849bd8e8b0d294e77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 396776640926406732}
   speed: 1
   jumpForce: 100
   groundCheckPoint: {fileID: 2647371438002976187}
-  animator: {fileID: 2647371436357676587}
 --- !u!114 &2647371436410058550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,11 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831e67e387b8d064fa4c540193a7a7b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 2647371436357676587}
-  shot: {fileID: 3649507625192987586, guid: 6f27fc84d1f2fd14e9363d8112b5f365, type: 3}
-  firePoint_stand: {fileID: 3625630584688625411}
-  firePoint_duck: {fileID: 6297499479582169698}
-  firePoint_up: {fileID: 1676172145828927834}
+  player: {fileID: 396776640926406732}
+  firePointStand: {fileID: 3625630584688625411}
+  firePointDuck: {fileID: 6297499479582169698}
+  firePointUp: {fileID: 1676172145828927834}
 --- !u!114 &2647371436410058539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b50dd8c15a7574f9115dfd4ee7ead7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 396776640926406732}
+  maxHealth: 10
 --- !u!1 &2647371438002976188
 GameObject:
   m_ObjectHideFlags: 0
