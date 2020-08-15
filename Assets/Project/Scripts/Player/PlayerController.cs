@@ -38,6 +38,7 @@ namespace WarpedBounty.Player
 
         public void OnShoot(InputAction.CallbackContext context)
         {
+            if (!context.performed) return;
             _playerWeapons.Shoot();
         }
 

@@ -20,8 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_cling.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_cling.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_duck.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_duck.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_hurt.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_hurt.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_jump_rotate.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_jump_rotate.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_jump_start.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_jump_start.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_run.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_run.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_run_shoot.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_run_shoot.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_shoot_up.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_shoot_up.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_stand.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_stand.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Shot.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Shot/Shot.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Shot/Shot.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Shot/Shot.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Shot/Shot.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Shot.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Shot.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_animator.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_cling.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_cling.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_duck.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_duck.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_rotate.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_rotate.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_start.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_jump_start.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run_shoot.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_run_shoot.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_shoot_up.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_shoot_up.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_stand.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player_stand.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,12 +98,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@4.1.2/Runtime/SpriteShapeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -48,9 +115,15 @@
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/ShotPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
       </list>
     </option>
   </component>
@@ -104,6 +177,7 @@
       <workItem from="1597119837669" duration="3926000" />
       <workItem from="1597190335035" duration="4155000" />
       <workItem from="1597276537266" duration="11854000" />
+      <workItem from="1597458416414" duration="5614000" />
     </task>
     <servers />
   </component>

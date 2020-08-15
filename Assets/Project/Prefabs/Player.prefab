@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 2647371436410058551}
   - component: {fileID: 2647371436410058536}
   - component: {fileID: 5799504810307532744}
+  - component: {fileID: 396776640926406732}
   - component: {fileID: 2647371436410058540}
   - component: {fileID: 2647371436410058537}
   - component: {fileID: 2647371436410058550}
@@ -258,6 +259,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0012144521, y: -0.12116729}
   m_Size: {x: 0.1101309, y: 0.21595892}
   m_Direction: 0
+--- !u!114 &396776640926406732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647371436410058541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20256c03cbd08954ead625bc7d6d210a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2647371436357676587}
 --- !u!114 &2647371436410058540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2647371436357676587}
+  shot: {fileID: 3649507625192987586, guid: 6f27fc84d1f2fd14e9363d8112b5f365, type: 3}
+  firePoint_stand: {fileID: 3625630584688625411}
+  firePoint_duck: {fileID: 6297499479582169698}
+  firePoint_up: {fileID: 1676172145828927834}
 --- !u!114 &2647371436410058539
 MonoBehaviour:
   m_ObjectHideFlags: 0
