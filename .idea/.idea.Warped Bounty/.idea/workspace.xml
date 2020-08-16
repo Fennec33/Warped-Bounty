@@ -20,10 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/MovingPlatform.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/MovingPlatform.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/IDamageable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Platform.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_hurt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_hurt.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Shot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Shot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" afterDir="false" />
@@ -41,18 +46,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.spriteshape@4.1.2/Runtime/SpriteShapeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Platform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -63,12 +71,15 @@
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/ShotPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/IDamageable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Platform.cs" />
       </list>
     </option>
   </component>
@@ -92,22 +103,29 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -123,11 +141,14 @@
       <workItem from="1597190335035" duration="4155000" />
       <workItem from="1597276537266" duration="11854000" />
       <workItem from="1597458416414" duration="10881000" />
+      <workItem from="1597477416227" duration="101000" />
+      <workItem from="1597477732492" duration="146000" />
+      <workItem from="1597522463725" duration="12332000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
@@ -148,9 +169,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="178" key="SettingsEditor" timestamp="1597121686751">
+    <state x="440" y="178" key="SettingsEditor" timestamp="1597477800838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="178" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1597121686751" />
+    <state x="440" y="178" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1597477800838" />
   </component>
 </project>

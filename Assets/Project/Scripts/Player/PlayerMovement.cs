@@ -9,11 +9,14 @@ namespace WarpedBounty.Player
         [SerializeField] private PlayerInfo player;
         [SerializeField] private float speed = 1f;
         [SerializeField] private float jumpForce = 100f;
-        [SerializeField] private Transform groundCheckPoint;
+        [SerializeField] private float coyoteTime = 0.1f;
+        [SerializeField] private Collider2D standingCollider;
+        [SerializeField] private Collider2D duckingCollider;
+        [SerializeField] [Range(0, 3)] private int numberOfAirJumps = 0;
 
+        private float _timeSinceJumpExecuted = 0f;
+        private int _jumpsExecuted = 0;
         private Rigidbody2D _rigidbody2D;
-
-        private const float GroundCheckRadius = 0.01f;
 
         private void Awake()
         {
@@ -33,34 +36,46 @@ namespace WarpedBounty.Player
 
         public void Jump()
         {
-            Collider2D[] colliders = new Collider2D[2];
-            Physics2D.OverlapCircleNonAlloc(groundCheckPoint.position, GroundCheckRadius, colliders);
-            foreach (var collision in colliders)
+            if (player.TimeSinceLastGrounded <= coyoteTime || _jumpsExecuted <= numberOfAirJumps)
             {
-                if (collision.gameObject == gameObject) continue;
-                _rigidbody2D.AddForce(transform.up * jumpForce);
+                _jumpsExecuted++;
+                _timeSinceJumpExecuted = 0f;
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
                 player.IsJumping(true);
                 player.StartJumpAnimation();
-                break;
+            }
+        }
+
+        public void StopJump()
+        {
+            if (_rigidbody2D.velocity.y > 0)
+            {
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y / 2);
             }
         }
 
         public void UpDown(float axis)
         {
-            if (axis > 0f)
+            if (axis > 0.2f)
             {
                 player.IsDucking(false);
                 player.IsFacingUp(true);
+                standingCollider.enabled = true;
+                duckingCollider.enabled = false;
             }
-            else if (axis < 0f)
+            else if (axis < -0.2f)
             {
                 player.IsFacingUp(false);
                 player.IsDucking(true);
+                duckingCollider.enabled = true;
+                standingCollider.enabled = false;
             }
             else
             {
                 player.IsFacingUp(false);
                 player.IsDucking(false);
+                standingCollider.enabled = true;
+                duckingCollider.enabled = false;
             }
         }
 
@@ -75,11 +90,16 @@ namespace WarpedBounty.Player
         private void FixedUpdate()
         {
             transform.position += Time.deltaTime * speed * player.Direction;
+            if (player.IsGrounded() && _timeSinceJumpExecuted >= 0.1f)
+            {
+                player.IsJumping(false);
+                _jumpsExecuted = 0;
+            }
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void Update()
         {
-            player.IsJumping(false);
+            _timeSinceJumpExecuted += Time.deltaTime;
         }
     }
 }

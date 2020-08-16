@@ -33,8 +33,11 @@ namespace WarpedBounty.Player
 
         public void OnJump(InputAction.CallbackContext context)
         {
-            if (!context.performed) return;
-            _playerMovement.Jump();
+            if (context.performed)
+                _playerMovement.Jump();
+            if (context.canceled)
+                _playerMovement.StopJump();
+            
         }
 
         public void OnShoot(InputAction.CallbackContext context)

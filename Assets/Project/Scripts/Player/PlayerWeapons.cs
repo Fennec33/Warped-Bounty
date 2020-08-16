@@ -32,7 +32,15 @@ namespace WarpedBounty.Player
 
             var newShot = ShotPool.Instance.Get();
             newShot.transform.position = firePoint;
-            newShot.SetDirection(player.DirectionFacing);
+            if (player.IsFacingUp())
+            {
+                newShot.SetDirection(Vector3.up);
+            }
+            else
+            {
+                newShot.SetDirection(player.DirectionFacing);
+            }
+
             newShot.gameObject.SetActive(true);
             _shootTimeElapsed = 0f;
         }

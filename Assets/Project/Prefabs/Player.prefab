@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20256c03cbd08954ead625bc7d6d210a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckPoint: {fileID: 2647371438002976187}
   animator: {fileID: 2647371436357676587}
 --- !u!114 &2647371436410058540
 MonoBehaviour:
@@ -298,8 +299,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 396776640926406732}
   speed: 1
-  jumpForce: 100
-  groundCheckPoint: {fileID: 2647371438002976187}
+  jumpForce: 2
+  coyoteTime: 0.2
+  standingCollider: {fileID: 2647371436410058536}
+  duckingCollider: {fileID: 5799504810307532744}
+  numberOfAirJumps: 1
 --- !u!114 &2647371436410058550
 MonoBehaviour:
   m_ObjectHideFlags: 0

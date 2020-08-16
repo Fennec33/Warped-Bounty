@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace WarpedBounty.Player
 {
-    public class PlayerHealth : MonoBehaviour
+    public class PlayerHealth : MonoBehaviour, IDamagable
     {
         [SerializeField] private PlayerInfo player;
         [SerializeField] private int maxHealth = 10;
@@ -18,6 +18,7 @@ namespace WarpedBounty.Player
         public void Damage(int damage)
         {
             _health -= Mathf.Abs(damage);
+            player.StartHurtAnimation();
         }
 
         public void Heal(int healing)
