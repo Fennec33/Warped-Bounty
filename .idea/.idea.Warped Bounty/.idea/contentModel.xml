@@ -21,10 +21,12 @@
               <e p="PlayerWeapons.cs" t="Include" />
             </e>
             <e p="Pooling" t="Include">
+              <e p="ChargeShotPool.cs" t="Include" />
               <e p="ObjectPool.cs" t="Include" />
               <e p="ShotPool.cs" t="Include" />
             </e>
             <e p="Shot.cs" t="Include" />
+            <e p="Shot2.cs" t="Include" />
             <e p="ShotDispenser.cs" t="Include" />
           </e>
         </e>

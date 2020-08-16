@@ -70,8 +70,11 @@ namespace WarpedBounty.Player
             {
                 player.IsFacingUp(false);
                 player.IsDucking(true);
-                duckingCollider.enabled = true;
-                standingCollider.enabled = false;
+                if (standingCollider.enabled == true)
+                {
+                    duckingCollider.enabled = true;
+                    standingCollider.enabled = false;
+                }
             }
             else
             {

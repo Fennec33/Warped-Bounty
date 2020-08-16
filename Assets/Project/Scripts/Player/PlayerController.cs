@@ -1,19 +1,27 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using WarpedBounty.Player;
 
 namespace WarpedBounty.Player
 {
+    #region Component Requirements
+    [RequireComponent(typeof(PlayerInfo))]
     [RequireComponent(typeof(PlayerMovement))]
     [RequireComponent(typeof(PlayerWeapons))]
     [RequireComponent(typeof(PlayerHealth))]
+    #endregion
     public class PlayerController : MonoBehaviour, InputMaster.IGameplayActions
     {
+        //[SerializeField] private float startChargeingShot;
+        [SerializeField] private float finishChargingShot = 1.5f;
+        
+        
         private InputMaster _inputMaster;
         private PlayerMovement _playerMovement;
         private PlayerWeapons _playerWeapons;
         private PlayerHealth _playerHealth;
+        private bool _chargingShot = false;
+        private float _chargeTime = 0f;
 
         private void Awake()
         {
@@ -23,6 +31,14 @@ namespace WarpedBounty.Player
             _playerHealth = GetComponent<PlayerHealth>();
             
             _inputMaster.Gameplay.SetCallbacks(this);
+        }
+
+        private void Update()
+        {
+            if (_chargingShot)
+            {
+                _chargeTime += Time.deltaTime;
+            }
         }
 
         public void OnMove(InputAction.CallbackContext context)
@@ -42,8 +58,21 @@ namespace WarpedBounty.Player
 
         public void OnShoot(InputAction.CallbackContext context)
         {
-            if (!context.performed) return;
-            _playerWeapons.Shoot();
+
+            if (context.performed)
+            {
+                _chargeTime = 0f;
+                _chargingShot = true;
+            }
+
+            if (context.canceled)
+            {
+                if (_chargeTime < finishChargingShot)
+                    _playerWeapons.Shoot();
+                else
+                    _playerWeapons.ChargeShoot();
+                _chargingShot = false;
+            }
         }
 
         public void OnUpDown(InputAction.CallbackContext context)

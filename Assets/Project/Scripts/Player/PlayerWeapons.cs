@@ -44,5 +44,31 @@ namespace WarpedBounty.Player
             newShot.gameObject.SetActive(true);
             _shootTimeElapsed = 0f;
         }
+
+        public void ChargeShoot()
+        {
+            Vector3 firePoint;
+
+            if (player.IsDucking())
+                firePoint = firePointDuck.position;
+            else if (player.IsFacingUp())
+                firePoint = firePointUp.position;
+            else
+                firePoint = firePointStand.position;
+            
+            var newShot = ChargeShotPool.Instance.Get();
+            newShot.transform.position = firePoint;
+            if (player.IsFacingUp())
+            {
+                newShot.SetDirection(Vector3.up);
+            }
+            else
+            {
+                newShot.SetDirection(player.DirectionFacing);
+            }
+
+            newShot.gameObject.SetActive(true);
+            _shootTimeElapsed = 0f;
+        }
     }
 }
