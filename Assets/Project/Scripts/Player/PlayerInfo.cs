@@ -31,6 +31,7 @@ namespace WarpedBounty.Player
         }
         public Vector3 DirectionFacing { get; private set; }
         public float TimeSinceLastGrounded { get; private set; }
+        public GameObject GroundedOn { get; private set; }
 
         private void Start()
         {
@@ -73,7 +74,10 @@ namespace WarpedBounty.Player
             {
                 if(collision == null) continue;
                 if (collision.gameObject != gameObject)
+                {
+                    GroundedOn = collision.gameObject;
                     return true;
+                }
             }
 
             return false;

@@ -34,4 +34,16 @@ public class Platform : MonoBehaviour
     {
         transform.position = Vector3.Lerp(point1.position, point2.position, _lerpPct);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            other.gameObject.transform.SetParent(transform);
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+            other.gameObject.transform.SetParent(null);
+    }
 }

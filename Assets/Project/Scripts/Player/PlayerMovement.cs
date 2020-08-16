@@ -60,8 +60,11 @@ namespace WarpedBounty.Player
             {
                 player.IsDucking(false);
                 player.IsFacingUp(true);
-                standingCollider.enabled = true;
-                duckingCollider.enabled = false;
+                if (standingCollider.enabled == false)
+                {
+                    standingCollider.enabled = true;
+                    duckingCollider.enabled = false;
+                }
             }
             else if (axis < -0.2f)
             {
@@ -74,8 +77,11 @@ namespace WarpedBounty.Player
             {
                 player.IsFacingUp(false);
                 player.IsDucking(false);
-                standingCollider.enabled = true;
-                duckingCollider.enabled = false;
+                if (standingCollider.enabled == false)
+                {
+                    standingCollider.enabled = true;
+                    duckingCollider.enabled = false;
+                }
             }
         }
 
@@ -89,6 +95,15 @@ namespace WarpedBounty.Player
 
         private void FixedUpdate()
         {
+            if (player.IsGrounded())
+            {
+                Rigidbody2D ground = player.GroundedOn.GetComponent<Rigidbody2D>();
+                if (ground != null)
+                {
+                    Debug.Log(ground);
+                    _rigidbody2D.velocity += ground.velocity;
+                }
+            }
             transform.position += Time.deltaTime * speed * player.Direction;
             if (player.IsGrounded() && _timeSinceJumpExecuted >= 0.1f)
             {

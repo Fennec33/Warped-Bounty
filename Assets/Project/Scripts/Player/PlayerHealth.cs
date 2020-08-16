@@ -13,12 +13,16 @@ namespace WarpedBounty.Player
         private void Start()
         {
             _health = maxHealth;
+            Debug.Log("Health: " + _health);
         }
 
         public void Damage(int damage)
         {
             _health -= Mathf.Abs(damage);
             player.StartHurtAnimation();
+            Debug.Log("Health: " + _health);
+            if (_health <= 0)
+                Destroy(gameObject);
         }
 
         public void Heal(int healing)
