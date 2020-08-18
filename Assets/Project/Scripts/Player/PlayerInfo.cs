@@ -6,12 +6,15 @@ namespace WarpedBounty.Player
     public class PlayerInfo : MonoBehaviour
     {
         [SerializeField] private Transform groundCheckPoint;
+        [SerializeField] private Transform wallCheckPoint1;
+        [SerializeField] private Transform wallCheckPoint2;
         [SerializeField] private Animator animator;
         #region Animator Strings To Hash
         private readonly int _isMoving = Animator.StringToHash("IsMoving");
         private readonly int _isFacingUp = Animator.StringToHash("IsFacingUp");
         private readonly int _isDucking = Animator.StringToHash("IsDucking");
         private readonly int _isJumping = Animator.StringToHash("IsJumping");
+        private readonly int _isClinging = Animator.StringToHash("IsClinging");
         private readonly int _startJump = Animator.StringToHash("StartJump");
         private readonly int _timeSinceLastShoot = Animator.StringToHash("TimeSinceLastShoot");
         private readonly int _hurt = Animator.StringToHash("Hurt");
@@ -49,6 +52,8 @@ namespace WarpedBounty.Player
         public void IsDucking(bool value) => animator.SetBool(_isDucking, value);
         public bool IsJumping() => animator.GetBool(_isJumping);
         public void IsJumping(bool value) => animator.SetBool(_isJumping, value);
+        public bool IsClinging() => animator.GetBool(_isClinging);
+        public void IsClinging(bool value) => animator.SetBool(_isClinging, value);
         public void StartJumpAnimation() => animator.SetTrigger(_startJump);
         public void StartHurtAnimation() => animator.SetTrigger(_hurt);
         public float TimeSinceLastShoot() => animator.GetFloat(_timeSinceLastShoot);
@@ -72,6 +77,14 @@ namespace WarpedBounty.Player
         {
             Collider2D[] colliders = new Collider2D[1];
             Physics2D.OverlapCircleNonAlloc(groundCheckPoint.position, GroundCheckRadius, colliders, _walkableSurfaceMask);
+            if(colliders[0] == null) return false;
+            else return true;
+        }
+
+        public bool IsOnWall()
+        {
+            Collider2D[] colliders = new Collider2D[1];
+            Physics2D.OverlapAreaNonAlloc(wallCheckPoint1.position, wallCheckPoint2.position , colliders, _walkableSurfaceMask);
             if(colliders[0] == null) return false;
             else return true;
         }

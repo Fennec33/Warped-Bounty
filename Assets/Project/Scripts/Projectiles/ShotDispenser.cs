@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using WarpedBounty.Pooling;
 
-namespace WarpedBounty
+namespace WarpedBounty.Projectiles
 {
     public class ShotDispenser : MonoBehaviour
     {

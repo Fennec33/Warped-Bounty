@@ -20,12 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ChargeShot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ChargeShot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Projectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Shot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/MovingPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/MovingPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Player/Player_animator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/ChargeShot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/ChargeShot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ChargeShotPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ChargeShotPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Shot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Shot2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Shot2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ShotDispenser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ShotDispenser.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Platform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ShotDispenser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +73,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81986B7D-E77F-470C-8157-A969000B3A00/a1/50fbb37e/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/InputSystem/InputMaster.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Shot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -63,17 +84,21 @@
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/ShotPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ShotPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/ShotDispenser.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Platform.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot2.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ChargeShotPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerWeapons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Pooling/ChargeShotPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Shot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/ChargeShot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ChargeShot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Projectile.cs" />
       </list>
     </option>
   </component>
@@ -138,7 +163,8 @@
       <workItem from="1597477416227" duration="101000" />
       <workItem from="1597477732492" duration="146000" />
       <workItem from="1597522463725" duration="18279000" />
-      <workItem from="1597712183464" duration="2428000" />
+      <workItem from="1597712183464" duration="2452000" />
+      <workItem from="1597715307148" duration="4458000" />
     </task>
     <servers />
   </component>

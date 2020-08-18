@@ -1,6 +1,8 @@
-﻿namespace WarpedBounty.Pooling
+﻿using WarpedBounty.Projectiles;
+
+namespace WarpedBounty.Pooling
 {
-    public class ChargeShotPool : ObjectPool<Shot2>
+    public class ChargeShotPool : ObjectPool<ChargeShot>
     {
     }
 }

@@ -25,9 +25,12 @@
               <e p="ObjectPool.cs" t="Include" />
               <e p="ShotPool.cs" t="Include" />
             </e>
-            <e p="Shot.cs" t="Include" />
-            <e p="Shot2.cs" t="Include" />
-            <e p="ShotDispenser.cs" t="Include" />
+            <e p="Projectiles" t="Include">
+              <e p="ChargeShot.cs" t="Include" />
+              <e p="Projectile.cs" t="Include" />
+              <e p="Shot.cs" t="Include" />
+              <e p="ShotDispenser.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

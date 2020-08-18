@@ -110,11 +110,24 @@ namespace WarpedBounty.Player
                 player.IsJumping(false);
                 _jumpsExecuted = 0;
             }
+
+            if (player.IsOnWall() && !player.IsGrounded())
+            {
+                var direction = transform.localScale.x;
+                direction *= -1;
+                FlipDirectionTo(direction);
+                player.IsClinging(true);
+            }
         }
 
         private void Update()
         {
             _timeSinceJumpExecuted += Time.deltaTime;
+            
+            if (!player.IsOnWall() || player.IsGrounded())
+            {
+                player.IsClinging(false);
+            }
         }
     }
 }

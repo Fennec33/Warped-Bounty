@@ -10,6 +10,7 @@ namespace WarpedBounty.Player
         [SerializeField] private Transform firePointStand;
         [SerializeField] private Transform firePointDuck;
         [SerializeField] private Transform firePointUp;
+        [SerializeField] private Transform firePointCling;
 
         private float _shootTimeElapsed = 0f;
 
@@ -27,6 +28,8 @@ namespace WarpedBounty.Player
                 firePoint = firePointDuck.position;
             else if (player.IsFacingUp())
                 firePoint = firePointUp.position;
+            else if (player.IsClinging())
+                firePoint = firePointCling.position;
             else
                 firePoint = firePointStand.position;
 

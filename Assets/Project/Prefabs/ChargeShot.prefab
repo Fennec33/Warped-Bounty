@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6113817761163726060}
   - component: {fileID: 1109857354948998336}
   - component: {fileID: 4319157189675097600}
-  - component: {fileID: 1666663588139154192}
+  - component: {fileID: 204973491691731242}
   m_Layer: 0
   m_Name: ChargeShot
   m_TagString: Untagged
@@ -152,7 +152,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16084746, y: 0.061461218}
   m_EdgeRadius: 0
---- !u!114 &1666663588139154192
+--- !u!114 &204973491691731242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  damage: 3
+  damage: 1

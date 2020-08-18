@@ -1,17 +1,15 @@
-﻿using System;
-using UnityEngine;
-using WarpedBounty.Pooling;
+﻿using UnityEngine;
 
-namespace WarpedBounty
+namespace WarpedBounty.Projectiles
 {
-    public class Shot : MonoBehaviour
+    public abstract class Projectile : MonoBehaviour
     {
         [SerializeField] private float speed = 3f;
         [SerializeField] private int damage = 1;
         
 
         private Vector3 _direction = Vector3.right;
-        private float _maxLifetime = 10f;
+        private float _maxLifetime = 5f;
         private float _lifetime;
 
         private void OnEnable()
@@ -23,7 +21,7 @@ namespace WarpedBounty
         {
             _lifetime += Time.deltaTime;
             if (_lifetime > _maxLifetime)
-                ShotPool.Instance.ReturnToPool(this);
+                ReturnToPool();
         }
 
         public void SetDirection(Vector3 direction)
@@ -46,7 +44,12 @@ namespace WarpedBounty
             var collision = other.gameObject.GetComponent<IDamagable>();
             if (collision != null)
                 collision.Damage(damage);
-            ShotPool.Instance.ReturnToPool(this);
+            ReturnToPool();
+        }
+
+        protected virtual void ReturnToPool()
+        {
+            Destroy(this.gameObject);
         }
     }
 }
