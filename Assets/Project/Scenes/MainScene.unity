@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 457800775}
   - component: {fileID: 457800774}
   - component: {fileID: 457800773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New SpriteShapeController (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 973875985}
   - component: {fileID: 973875984}
   - component: {fileID: 973875983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New SpriteShapeController (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 1486921000}
   - component: {fileID: 1486920999}
   - component: {fileID: 1486920998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New SpriteShapeController (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 1974458024}
   - component: {fileID: 1974458023}
   - component: {fileID: 1974458022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New SpriteShapeController (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

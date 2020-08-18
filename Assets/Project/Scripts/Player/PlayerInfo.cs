@@ -17,6 +17,7 @@ namespace WarpedBounty.Player
         private readonly int _hurt = Animator.StringToHash("Hurt");
         #endregion
 
+        private LayerMask _walkableSurfaceMask;
         private const float GroundCheckRadius = 0.01f;
         private Vector3 _direction;
         public Vector3 Direction
@@ -31,10 +32,10 @@ namespace WarpedBounty.Player
         }
         public Vector3 DirectionFacing { get; private set; }
         public float TimeSinceLastGrounded { get; private set; }
-        public GameObject GroundedOn { get; private set; }
 
         private void Start()
         {
+            _walkableSurfaceMask = LayerMask.GetMask("Wall", "Platform");
             DirectionFacing = Vector3.right;
             TimeSinceLastGrounded = 0f;
         }
@@ -56,31 +57,23 @@ namespace WarpedBounty.Player
 
         private void Update()
         {
+            TimeSinceLastGrounded += Time.deltaTime;
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
             if (IsGrounded())
             {
                 TimeSinceLastGrounded = 0;
-            }
-            else
-            {
-                TimeSinceLastGrounded += Time.deltaTime;
             }
         }
 
         public bool IsGrounded()
         {
-            Collider2D[] colliders = new Collider2D[2];
-            Physics2D.OverlapCircleNonAlloc(groundCheckPoint.position, GroundCheckRadius, colliders);
-            foreach (var collision in colliders)
-            {
-                if(collision == null) continue;
-                if (collision.gameObject != gameObject)
-                {
-                    GroundedOn = collision.gameObject;
-                    return true;
-                }
-            }
-
-            return false;
+            Collider2D[] colliders = new Collider2D[1];
+            Physics2D.OverlapCircleNonAlloc(groundCheckPoint.position, GroundCheckRadius, colliders, _walkableSurfaceMask);
+            if(colliders[0] == null) return false;
+            else return true;
         }
     }
 }

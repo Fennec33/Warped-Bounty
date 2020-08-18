@@ -50,7 +50,9 @@ namespace WarpedBounty.Player
         {
             if (_rigidbody2D.velocity.y > 0)
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y / 2);
+                var velocity = _rigidbody2D.velocity;
+                velocity = new Vector2(velocity.x, velocity.y / 2);
+                _rigidbody2D.velocity = velocity;
             }
         }
 
@@ -98,16 +100,11 @@ namespace WarpedBounty.Player
 
         private void FixedUpdate()
         {
-            if (player.IsGrounded())
-            {
-                Rigidbody2D ground = player.GroundedOn.GetComponent<Rigidbody2D>();
-                if (ground != null)
-                {
-                    Debug.Log(ground);
-                    _rigidbody2D.velocity += ground.velocity;
-                }
-            }
             transform.position += Time.deltaTime * speed * player.Direction;
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
             if (player.IsGrounded() && _timeSinceJumpExecuted >= 0.1f)
             {
                 player.IsJumping(false);
