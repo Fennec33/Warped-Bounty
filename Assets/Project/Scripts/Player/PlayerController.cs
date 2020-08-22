@@ -12,39 +12,33 @@ namespace WarpedBounty.Player
     #endregion
     public class PlayerController : MonoBehaviour, InputMaster.IGameplayActions
     {
-        //[SerializeField] private float startChargeingShot;
         [SerializeField] private float finishChargingShot = 1.5f;
-        
         
         private InputMaster _inputMaster;
         private PlayerMovement _playerMovement;
         private PlayerWeapons _playerWeapons;
         private PlayerHealth _playerHealth;
-        private bool _chargingShot = false;
-        private float _chargeTime = 0f;
+        private Timer _chargeTimer;
 
         private void Awake()
         {
             _inputMaster = new InputMaster();
+            _inputMaster.Gameplay.SetCallbacks(this);
+            
             _playerMovement = GetComponent<PlayerMovement>();
             _playerWeapons = GetComponent<PlayerWeapons>();
             _playerHealth = GetComponent<PlayerHealth>();
-            
-            _inputMaster.Gameplay.SetCallbacks(this);
-        }
 
-        private void Update()
-        {
-            if (_chargingShot)
-            {
-                _chargeTime += Time.deltaTime;
-            }
+            _chargeTimer = gameObject.AddComponent<Timer>();
         }
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            Vector3 direction = new Vector3(context.ReadValue<float>(),0f,0f);
-            _playerMovement.Move(direction);
+            var direction = new Vector3(context.ReadValue<float>(),0f,0f);
+            _playerMovement.SetDirection(direction);
+            
+            if (context.performed) _playerMovement.StartMoving();
+            else if (context.canceled) _playerMovement.StopMoving();
         }
 
         public void OnJump(InputAction.CallbackContext context)
@@ -61,33 +55,28 @@ namespace WarpedBounty.Player
 
             if (context.performed)
             {
-                _chargeTime = 0f;
-                _chargingShot = true;
+                _chargeTimer.ResetTime();
             }
 
             if (context.canceled)
             {
-                if (_chargeTime < finishChargingShot)
+                if (_chargeTimer.GetTime() < finishChargingShot)
                     _playerWeapons.Shoot();
                 else
                     _playerWeapons.ChargeShoot();
-                _chargingShot = false;
             }
         }
 
         public void OnUpDown(InputAction.CallbackContext context)
         {
-            _playerMovement.UpDown(context.ReadValue<float>());
+            var value = context.ReadValue<float>();
+            
+            if (value > 0.2f) _playerMovement.LookUp();
+            else if (value < -0.2f) _playerMovement.Duck();
+            else _playerMovement.Stand();
         }
 
-        private void OnEnable()
-        {
-            _inputMaster.Enable();
-        }
-
-        private void OnDisable()
-        {
-            _inputMaster.Disable();
-        }
+        private void OnEnable() => _inputMaster.Enable();
+        private void OnDisable() => _inputMaster.Disable();
     }
 }

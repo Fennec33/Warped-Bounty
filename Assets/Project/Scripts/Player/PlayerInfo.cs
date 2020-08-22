@@ -21,9 +21,10 @@ namespace WarpedBounty.Player
         #endregion
 
         private LayerMask _walkableSurfaceMask;
+        private LayerMask _clingableSurfaceMask;
         private const float GroundCheckRadius = 0.01f;
         private Vector3 _direction;
-        public Vector3 Direction
+        public Vector3 Direction 
         {
             get => _direction;
             set
@@ -39,6 +40,7 @@ namespace WarpedBounty.Player
         private void Start()
         {
             _walkableSurfaceMask = LayerMask.GetMask("Wall", "Platform");
+            _clingableSurfaceMask = LayerMask.GetMask("Wall");
             DirectionFacing = Vector3.right;
             TimeSinceLastGrounded = 0f;
         }
@@ -84,7 +86,7 @@ namespace WarpedBounty.Player
         public bool IsOnWall()
         {
             Collider2D[] colliders = new Collider2D[1];
-            Physics2D.OverlapAreaNonAlloc(wallCheckPoint1.position, wallCheckPoint2.position , colliders, _walkableSurfaceMask);
+            Physics2D.OverlapAreaNonAlloc(wallCheckPoint1.position, wallCheckPoint2.position , colliders, _clingableSurfaceMask);
             if(colliders[0] == null) return false;
             else return true;
         }
