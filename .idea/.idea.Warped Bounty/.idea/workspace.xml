@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Timer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Timer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
@@ -77,8 +75,8 @@
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/ChargeShot.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Projectiles/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
       </list>
     </option>
@@ -148,6 +146,7 @@
       <workItem from="1597715307148" duration="4458000" />
       <workItem from="1597977308632" duration="3444000" />
       <workItem from="1598062504642" duration="5831000" />
+      <workItem from="1598314612551" duration="9514000" />
     </task>
     <servers />
   </component>

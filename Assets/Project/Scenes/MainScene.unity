@@ -1204,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2647371436410058551, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2647371438002976186, guid: e9f0804aea3d5884dab66ecfe5a2c314, type: 3}
       propertyPath: m_Controller
       value: 

@@ -34,11 +34,9 @@ namespace WarpedBounty.Player
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            var direction = new Vector3(context.ReadValue<float>(),0f,0f);
-            _playerMovement.SetDirection(direction);
-            
-            if (context.performed) _playerMovement.StartMoving();
-            else if (context.canceled) _playerMovement.StopMoving();
+            if (context.started) return;
+            var direction = new Vector2(context.ReadValue<float>(),0f);
+            _playerMovement.Move(direction);
         }
 
         public void OnJump(InputAction.CallbackContext context)

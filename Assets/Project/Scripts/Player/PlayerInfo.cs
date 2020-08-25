@@ -23,14 +23,14 @@ namespace WarpedBounty.Player
         private LayerMask _walkableSurfaceMask;
         private LayerMask _clingableSurfaceMask;
         private const float GroundCheckRadius = 0.01f;
-        private Vector3 _direction;
-        public Vector3 Direction 
+        private Vector2 _direction;
+        public Vector2 Direction 
         {
             get => _direction;
             set
             {
                 _direction = value.normalized;
-                if (_direction != Vector3.zero)
+                if (_direction != Vector2.zero)
                     DirectionFacing = _direction;
             }
         }
@@ -41,7 +41,7 @@ namespace WarpedBounty.Player
         {
             _walkableSurfaceMask = LayerMask.GetMask("Wall", "Platform");
             _clingableSurfaceMask = LayerMask.GetMask("Wall");
-            DirectionFacing = Vector3.right;
+            DirectionFacing = Vector2.right;
             TimeSinceLastGrounded = 0f;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace WarpedBounty.Player
 {
@@ -12,32 +13,71 @@ namespace WarpedBounty.Player
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private Collider2D standingCollider;
         [SerializeField] private Collider2D duckingCollider;
-        [SerializeField] [Range(0, 3)] private int numberOfAirJumps = 0;
+        [SerializeField] private int numberOfAirJumps = 0;
         
         private Timer _jumpTimer;
         private int _jumpsExecuted = 0;
         private Rigidbody2D _rigidbody2D;
+        private bool _jumpStopped = false;
+        private bool _jumpedWithArrowKeys = false;
+        
 
-        private void Awake()
+        public void Move(Vector2 direction)
         {
-            _rigidbody2D = GetComponent<Rigidbody2D>();
-            _jumpTimer = gameObject.AddComponent<Timer>();
-        }
+            _rigidbody2D.velocity = new Vector2(0f, _rigidbody2D.velocity.y);
+            
+            if (_jumpedWithArrowKeys && direction == Vector2.zero)
+            {
+                StopJump();
+            }
 
-        public void SetDirection(Vector3 direction)
+            if (player.IsClinging() && player.Direction == direction)
+            {
+                player.IsMoving(true);
+                Jump();
+            }
+            else if (!player.IsClinging())
+            {
+                SetDirection(direction);
+                if (direction != Vector2.zero)
+                    player.IsMoving(true);
+                else
+                    player.IsMoving(false);
+            }
+        }
+        
+        public void Jump()
         {
-            if (direction == player.Direction) return;
-            if (direction == Vector3.zero)
+            _jumpStopped = false;
+            
+            if (player.IsClinging())
             {
-                player.Direction = direction;
+                player.IsClinging(false);
+                _jumpedWithArrowKeys = true;
+                
+                if (!player.IsMoving())
+                {
+                    _jumpedWithArrowKeys = false;
+                    _rigidbody2D.velocity = new Vector2(jumpForce / 2 * player.Direction.x, _rigidbody2D.velocity.y);
+                }
             }
-            else
+
+            if (player.TimeSinceLastGrounded <= coyoteTime || _jumpsExecuted <= numberOfAirJumps)
             {
-                player.Direction = direction;
-                FlipDirectionTo(direction.x);
+                _jumpsExecuted++;
+                _jumpTimer.ResetTime();
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
+                player.IsJumping(true);
+                player.StartJumpAnimation();
             }
         }
-
+        
+        public void StopJump()
+        {
+            _jumpStopped = true;
+            _jumpedWithArrowKeys = false;
+        }
+        
         public void LookUp()
         {
             player.IsDucking(false);
@@ -70,64 +110,24 @@ namespace WarpedBounty.Player
                 duckingCollider.enabled = false;
             }
         }
-        
-        public void StartMoving()
+
+        private void Awake()
         {
-            player.IsMoving(true);
-        }
-        
-        public void StopMoving()
-        {
-            player.IsMoving(false);
-        }
-        
-        public void Jump()
-        {
-            if (player.TimeSinceLastGrounded <= coyoteTime || _jumpsExecuted <= numberOfAirJumps)
-            {
-                _jumpsExecuted++;
-                _jumpTimer.ResetTime();
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
-                player.IsJumping(true);
-                player.StartJumpAnimation();
-            }
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _jumpTimer = gameObject.AddComponent<Timer>();
         }
 
-        public void JumpOffWall()
+        private void SetDirection(Vector2 direction)
         {
-            if (player.TimeSinceLastGrounded <= coyoteTime || _jumpsExecuted <= numberOfAirJumps)
-            {
-                Debug.Log("jumping off wall");
-                _jumpsExecuted++;
-                _jumpTimer.ResetTime();
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
-                player.IsJumping(true);
-                player.StartJumpAnimation();
-            }
-        }
+            if (direction == player.Direction) return;
+            if (direction == Vector2.zero) return;
+            
+            player.Direction = direction;
 
-        public void StopJump()
-        {
-            if (_rigidbody2D.velocity.y > 0)
-            {
-                var velocity = _rigidbody2D.velocity;
-                velocity = new Vector2(velocity.x, velocity.y / 2);
-                _rigidbody2D.velocity = velocity;
-            }
-        }
-
-        private void FlipDirectionTo(float dir)
-        {
-            var transform1 = transform;
-            Vector3 newScale = transform1.localScale;
-            newScale.x = dir;
-            transform1.localScale = newScale;
-        }
-
-        private void FixedUpdate()
-        {
-            if(player.IsMoving())
-                transform.position += Time.deltaTime * speed * player.Direction;
+            var t = transform;
+            var v = t.localScale;
+            v.x = direction.x;
+            t.localScale = v;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -141,9 +141,24 @@ namespace WarpedBounty.Player
             if (player.IsOnWall() && !player.IsGrounded())
             {
                 var direction = transform.localScale.x;
-                direction *= -1;
-                FlipDirectionTo(direction);
+                var directionV = new Vector3(direction * -1f, 0f, 0f);
+                SetDirection(directionV);
+                player.IsMoving(false);
                 player.IsClinging(true);
+                _jumpsExecuted = 0;
+            }
+        }
+        
+        private void FixedUpdate()
+        {
+            if(player.IsMoving() && !player.IsClinging())
+                transform.position += Time.deltaTime * speed * (Vector3) player.Direction;
+            
+            if (_jumpStopped && _rigidbody2D.velocity.y > 0 && !player.IsClinging())
+            {
+                var velocity = _rigidbody2D.velocity;
+                velocity = new Vector2(velocity.x, velocity.y * 0.8f);
+                _rigidbody2D.velocity = velocity;
             }
         }
 
