@@ -5,7 +5,8 @@ namespace WarpedBounty.Player
 {
     public class PlayerInfo : MonoBehaviour
     {
-        [SerializeField] private Transform groundCheckPoint;
+        [SerializeField] private Transform groundCheckPoint1;
+        [SerializeField] private Transform groundCheckPoint2;
         [SerializeField] private Transform wallCheckPoint1;
         [SerializeField] private Transform wallCheckPoint2;
         [SerializeField] private Animator animator;
@@ -78,7 +79,7 @@ namespace WarpedBounty.Player
         public bool IsGrounded()
         {
             Collider2D[] colliders = new Collider2D[1];
-            Physics2D.OverlapCircleNonAlloc(groundCheckPoint.position, GroundCheckRadius, colliders, _walkableSurfaceMask);
+            Physics2D.OverlapAreaNonAlloc(groundCheckPoint1.position, groundCheckPoint2.position , colliders, _walkableSurfaceMask);
             if(colliders[0] == null) return false;
             else return true;
         }

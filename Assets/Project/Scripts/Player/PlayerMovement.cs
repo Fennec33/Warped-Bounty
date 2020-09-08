@@ -14,13 +14,15 @@ namespace WarpedBounty.Player
         [SerializeField] private Collider2D standingCollider;
         [SerializeField] private Collider2D duckingCollider;
         [SerializeField] private int numberOfAirJumps = 0;
+        [SerializeField] private float clingingGravity = 0.15f;
+        
         
         private Timer _jumpTimer;
         private int _jumpsExecuted = 0;
         private Rigidbody2D _rigidbody2D;
         private bool _jumpStopped = false;
         private bool _jumpedWithArrowKeys = false;
-        
+        private float _normalGravity;
 
         public void Move(Vector2 direction)
         {
@@ -115,6 +117,7 @@ namespace WarpedBounty.Player
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _jumpTimer = gameObject.AddComponent<Timer>();
+            _normalGravity = _rigidbody2D.gravityScale;
         }
 
         private void SetDirection(Vector2 direction)
@@ -143,6 +146,7 @@ namespace WarpedBounty.Player
                 var direction = transform.localScale.x;
                 var directionV = new Vector3(direction * -1f, 0f, 0f);
                 SetDirection(directionV);
+                _rigidbody2D.gravityScale = clingingGravity;
                 player.IsMoving(false);
                 player.IsClinging(true);
                 _jumpsExecuted = 0;
@@ -166,6 +170,7 @@ namespace WarpedBounty.Player
         {
             if (!player.IsOnWall() || player.IsGrounded())
             {
+                _rigidbody2D.gravityScale = _normalGravity;
                 player.IsClinging(false);
             }
         }
