@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Project" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Crab.cs" t="Include" />
             <e p="IDamageable.cs" t="Include" />
             <e p="InputSystem" t="Include">
               <e p="InputMaster.cs" t="Include" />

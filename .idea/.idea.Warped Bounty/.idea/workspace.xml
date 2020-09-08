@@ -20,12 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c79b0a78-9795-459e-a602-4ac4dda758e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab-idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab-idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab-walk.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab-walk.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Artwork/Animations/Crab.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Crab.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Crab.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Crab.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Crab.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warped Bounty/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +86,7 @@
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Project/Scripts/Player/PlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Project/Scripts/Crab.cs" />
       </list>
     </option>
   </component>
@@ -148,7 +156,7 @@
       <workItem from="1597977308632" duration="3444000" />
       <workItem from="1598062504642" duration="5831000" />
       <workItem from="1598314612551" duration="9514000" />
-      <workItem from="1599596573755" duration="1671000" />
+      <workItem from="1599596573755" duration="6230000" />
     </task>
     <servers />
   </component>
